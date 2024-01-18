@@ -1,0 +1,58 @@
+/*CSS Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Serif', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    caret-color: transparent;
+    background-image: url(https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+
+#tools {
+    background-color: #49497e;
+}
+
+.card-img-top {
+    margin-top: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: transform .3s ease;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1);
+}
+
+#tools-img{
+   transition: transform 0.5s;
+}
+
+#tools-img:hover {
+   transform: translateY(-5px);
+}
+
+.form-group {
+    color: #fff;
+}
+
+.social-img {
+  height: 50px;
+  width: 50px;
+  margin: 1rem;
+  transition: transform 0.5s;
+}
+
+.social-img:hover {
+ transform: translateY(-5px);
+}
+
