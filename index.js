@@ -1,49 +1,51 @@
+const wordsSet1 = ['Full Stack Web Developer'];
 
-var wordsSet1 = ['Full Stack Web Developer'];
+let part1;
+let i = 0;
+let offset1 = 0;
+const len1 = wordsSet1.length;
+let forwards1 = true;
+let skip_count1 = 0;
+const skip_delay = 15;
+const speed = 70;
 
-var part1;
-var i = 0;
-var offset1 = 0;
-var len1 = wordsSet1.length;
-var forwards1 = true;
-var skip_count1 = 0;
-var skip_delay = 15;
-var speed = 70;
+const wordflick = function (wordsSet, elementSelector) {
+  let len = wordsSet.length;
+  let i = 0;
+  let offset = 0;
+  let forwards = true;
+  let skip_count = 0;
 
-var wordflick = function () {
   setInterval(function () {
-    if (forwards1) {
-      if (offset1 >= wordsSet1[i].length) {
-        ++skip_count1;
-        if (skip_count1 === skip_delay) {
-          forwards1 = false;
-          skip_count1 = 0;
+    if (forwards) {
+      if (offset >= wordsSet[i].length) {
+        ++skip_count;
+        if (skip_count === skip_delay) {
+          forwards = false;
+          skip_count = 0;
         }
       }
     } else {
-      if (offset1 === 0) {
-        forwards1 = true;
-        offset1 = 0;
+      if (offset === 0) {
+        forwards = true;
       }
     }
 
-    part1 = wordsSet1[i].substr(0, offset1);
+    part1 = wordsSet[i].substr(0, offset);
 
-    if (skip_count1 === 0) {
-      if (forwards1) {
-        offset1++;
+    if (skip_count === 0) {
+      if (forwards) {
+        offset++;
       } else {
-        offset1--;
+        offset--;
       }
     }
 
-    $('.words1').text(part1);
+    $(elementSelector).text(part1);
   }, speed);
 };
 
 $(document).ready(function () {
-  wordflick();
+  wordflick(wordsSet1, '.words1');
 });
-
-
 
