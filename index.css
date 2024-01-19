@@ -18,6 +18,13 @@ body {
     background-attachment: fixed;
     }
 
+
+#img-profile {
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+}
+
 #tools {
     background-color: #49497e;
 }
